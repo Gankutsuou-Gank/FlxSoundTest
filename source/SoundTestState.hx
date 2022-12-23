@@ -42,10 +42,8 @@ class SoundTestState extends FlxState
 	override function create()
 	{
 		var bg:FlxSprite = new FlxSprite(-100).loadGraphic('assets/images/soundTestBG.png');
-		bg.scale.x = 2.2;
-		bg.scale.y = 2.2;
-		bg.scrollFactor.x = 0;
-		bg.scrollFactor.y = 0;
+		bg.scale.set(2.2,2.2);
+		bg.scrollFactor.set(0,0);
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = true;
@@ -53,14 +51,14 @@ class SoundTestState extends FlxState
 		// bg
 		fm.setFormat("Sonic CD Menu Font Regular", 23, FlxColor.fromString("#aeb3fb"));
 		fm.setBorderStyle(SHADOW, FlxColor.fromString("#6a6e9f"), 4, 1);
-		fm.scale.x = 0.7;
-		fm.scale.y = 0.7;
+		fm.scale.set(0.7,0.7);
 		fmNum.y = 155;
+		fmNum.x = 140;
 		fm.y = 154;
 		fm.x = 28;
 		fmNum.alignment = "right";
 
-		fmNum.x = 140;
+
 		fmNum.scale.x = 0.7;
 		fmNum.scale.y = 0.7;
 		add(fm);
